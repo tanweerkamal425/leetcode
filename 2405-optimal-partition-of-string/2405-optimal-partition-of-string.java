@@ -5,14 +5,13 @@ class Solution {
         boolean map[] = new boolean[26];
         
         for (int i = 0; i < n; ++i) {
-            if (!map[s.charAt(i) - 'a']) {
-                map[s.charAt(i) - 'a'] = true;
-                continue;
-            } else {
+            char c = s.charAt(i);
+            if (map[c - 'a']) {
                 ans += 1;
-                map = new boolean[26];
-                map[s.charAt(i) - 'a'] = true;
+                map = new boolean[26]; 
             }
+            
+            map[c - 'a'] = true;
         }
         
         return ans;
