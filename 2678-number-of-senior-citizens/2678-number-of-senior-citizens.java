@@ -5,7 +5,7 @@ class Solution {
         
         for (int i = 0; i < n; ++i) {
             String s = details[i];
-            int age = Integer.parseInt(s.substring(11, 13));
+            int age = Integer.parseInt(s.charAt(11) + "" + s.charAt(12));
             
             if (age > 60) ans++;
         }
