@@ -11,6 +11,7 @@ class Solution {
                 cnt = 1;
             }
             
+            //checking i + 1 >= k, think when the window starts from 0 a[2] is 3rd element
             if (i + 1 >= k) {
                 ans[i - k + 1] = cnt >= k ? nums[i] : -1;
             }
